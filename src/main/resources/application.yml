@@ -1,12 +1,12 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/reactive_user
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/reactive_user?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Seoul
     username: postgres
     password: 1234
-  jpa:
-    hibernate:
-      dialect: org.hibernate.dialect.PostgreSQL10Dialect
-      ddl-auto: update
-      properties:
-        format_sql: true
-      show-sql: true
+jwt:
+  secret-key: eyJhbGciOiJIUzUxMiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTcwMDQ2NDU2MiwiaWF0IjoxNzAwNDY0NTYyfQ.rUfZOizvo8axjls865KSB4NvzprcF9c4d5OID_aMuGeMBX_Z6YYKG8strJh3QZTVnc02pRC7lP6d0dcBHi5t0A
+  issuer: yeo-chi
+  expiration-second: 100000
+logging:
+  level:
+    org.springframework.r2dbc.core: debug
