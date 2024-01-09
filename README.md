@@ -13,6 +13,7 @@
   - 
   - non-blocking 환경을 사용하기 위해 Spring MVC 대신 Spring Webflux 를 사용했습니다.
   - Database는 Postgresql을 사용했으나, Reactive환경에서는 JPA대신 R2DBMS를 사용한다 하여 JPA 대신 사용 하였습니다.
+  - 테스트는 PostMan으로 하였습니다.
 - 구현한 API
   - 
   - 회원가입 (POST)
